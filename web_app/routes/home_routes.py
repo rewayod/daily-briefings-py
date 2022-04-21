@@ -11,7 +11,6 @@ def index():
     #return "Welcome Home"
     return render_template("home.html")
 
-
 @home_routes.route("/about")
 def about():
     print("ABOUT...")
@@ -27,7 +26,7 @@ def another():
 
 @home_routes.route("/hello")
 def hello_world():
-    print("HELLO..."), dict(request.args))
+    print("HELLO..."), dict(request.args)
     name = request.args.get("name") or "World"
     message = f"Hello, {name}!"
     #return message
